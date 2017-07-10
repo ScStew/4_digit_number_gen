@@ -1,0 +1,3 @@
+def grandbash
+	arr = []
+end
