@@ -31,7 +31,12 @@ class Number_gen_test < Minitest::Test
 		winner = ["1234", "5555", "8789"]
 		assert_equal([],grandbash(ticket,winner))
 	end
-	
+
+	def test_one_number_off
+		ticket = "1234"
+		winner = ["1235","5555", "8789"]
+		assert_equal(["1234"],one_off?(ticket,winner))
+	end
 
 end
 
