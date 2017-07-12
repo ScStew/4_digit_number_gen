@@ -32,10 +32,28 @@ class Number_gen_test < Minitest::Test
 		assert_equal([],grandbash(ticket,winner))
 	end
 
-	def test_one_number_off
+	def test_one_off
 		ticket = "1234"
 		winner = ["1235","5555","8789"]
-		assert_equal(["1234"],one_off?(ticket,winner))
+		assert_equal(["1235"],one_off?(ticket,winner))
+	end
+
+	def test_one_off_return_multiple_numbers
+		ticket = "5432"
+		winner = ["5438", "5555", "5434"]
+		assert_equal(["5438","5434"],one_off?(ticket,winner))
+	end
+	
+	def test_gandbash_return_multiple_numbers
+		ticket = "5432"
+		winner = ["5438", "5555", "5434"]
+		assert_equal(["5438","5434"],grandbash(ticket,winner))
+	end
+
+	def test_grandbash_return_even_more_numbers
+		ticket = "5432"
+		winner = ["5438", "4432", "5434"]
+		assert_equal(["5438", "4432", "5434"],grandbash(ticket,winner))
 	end
 
 end
