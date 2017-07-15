@@ -29,24 +29,30 @@ def one_off?(ticket,winner)
 			
 			winner_arr = win.chars
 
+			index_counter = 0
 
-				unless winner_arr[0] == ticket_arr[0]
+				winner_arr.each do |num|
+				
+					unless num == ticket_arr[index_counter]
 					one_off_counter += 1
+					end
+
+					index_counter += 1
 				end
 
-				unless winner_arr[1]  == ticket_arr[1]
-					one_off_counter += 1
-				end
+				# unless winner_arr[1]  == ticket_arr[1]
+				# 	one_off_counter += 1
+				# end
 
-				unless winner_arr[2]  == ticket_arr[2]
-					one_off_counter += 1
-				end
+				# unless winner_arr[2]  == ticket_arr[2]
+				# 	one_off_counter += 1
+				# end
 
-				unless winner_arr[3]  == ticket_arr[3]
-					one_off_counter += 1
-				end
+				# unless winner_arr[3]  == ticket_arr[3]
+				# 	one_off_counter += 1
+				# end
 			
-			if one_off_counter <= 1
+			if one_off_counter == 1
 			one_off_arr << win
 			end
 		end
