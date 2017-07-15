@@ -68,5 +68,11 @@ class Number_gen_test < Minitest::Test
 		assert_equal(["543657"],grandbash(ticket,winner))
 	end
 
+	def test_grandbash_multiple_return_6_digits_one_off
+		ticket = "543654"
+		winner = ["542654", "343654", "688888"]
+		assert_equal(["542654","343654"],grandbash(ticket,winner))
+	end
+
 end
 
