@@ -74,5 +74,12 @@ class Number_gen_test < Minitest::Test
 		assert_equal(["542654","343654"],grandbash(ticket,winner))
 	end
 
+	def test_compare_strings_first
+		first = "1234"
+		second = "1235"
+		assert_equal(3,compare_string(first,second))
+	end
+
+
 end
 
