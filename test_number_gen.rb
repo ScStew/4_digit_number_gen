@@ -80,6 +80,19 @@ class Number_gen_test < Minitest::Test
 		assert_equal(3,compare_string(first,second))
 	end
 
+	def test_compare_strings_no_match
+		first = "1234"
+		second = "5678"
+		assert_equal(0,compare_string(first,second))
+	end
+
+	def test_compare_strings_1_match
+		first = "1234"
+		second = "4444"
+		assert_equal(1, compare_string(first,second))
+	end
+
+
 
 end
 
