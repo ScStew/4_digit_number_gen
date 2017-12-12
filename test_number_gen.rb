@@ -89,10 +89,9 @@ class Number_gen_test < Minitest::Test
 	def test_compare_strings_1_match
 		first = "1234"
 		second = "4444"
-		assert_equal(1, compare_string(first,second))
+		assert_equal(1,compare_string(first,second))
 	end
 
 
 
 end
-

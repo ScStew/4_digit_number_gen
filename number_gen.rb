@@ -44,18 +44,16 @@ def one_off?(ticket,winner)
 			one_off_arr << win
 			end
 		end
-	end	
-
-	def compare_string(first,second)
-		counter = 0
-		first.length.times do |x|
-			if first[x] == second[x]
-				counter += 1
-			end
-		end
-		counter
-	end
-
-one_off_arr
+	end		
+	one_off_arr
 end
 
+def compare_string(first,second)
+	counter = 0
+	first.length.times do |x|
+		if first[x] == second[x]
+			counter += 1
+		end
+	end
+	counter
+end
